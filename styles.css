@@ -355,6 +355,7 @@ header .order select {
     width: 140px;
     height: 140px;
   }
+  /* This is for show buger menu */
   .menu {
     display: block;
   }
@@ -369,6 +370,9 @@ header .order select {
   }
 }
 @media (min-width: 641px) {
+  .mobile-menu {
+    display: none;
+  }
   header {
     flex-direction: row;
     justify-content: left;

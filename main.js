@@ -7,6 +7,12 @@ const navbar_shopping_cart = document.querySelector('.navbar-shopping-cart');
 const product_detail = document.querySelector('.product-detail');
 const main_container = document.querySelector('.main-container');
 
+// height and width of the window
+let appHeight = window.innerHeight;
+let appWidth = window.innerWidth;
+
+
+
 // This is a call back function
 //This part of the code uses the constant 'navbar_email' and the
 //'.addEventListener' function to listen for a 'click' event on
@@ -14,8 +20,10 @@ const main_container = document.querySelector('.main-container');
 //the arrow function.
 navbar_email.addEventListener('click', () => {
     desktop_menu.classList.toggle('inactive'); // Add or remove the class 'inactive' from the element.
+    if(!product_detail.classList.contains('inactive')) {
+        product_detail.classList.toggle('inactive');
+    }
 });
-
 
 buttom_menu.addEventListener('click', () => {
     mobile_menu.classList.toggle('inactive'); // Add or remove the class 'inactive' from the element.
@@ -24,7 +32,14 @@ buttom_menu.addEventListener('click', () => {
 
 navbar_shopping_cart.addEventListener('click', () => {
     product_detail.classList.toggle('inactive');
-    main_container.classList.toggle('inactive');
+    appWidth = window.innerWidth;
+    if (appWidth < 641) {
+        console.log('mobile');
+        main_container.classList.toggle('inactive');
+    }
+    if (!desktop_menu.classList.contains('inactive')) {
+        desktop_menu.classList.toggle('inactive');
+    }
 });
 
 
