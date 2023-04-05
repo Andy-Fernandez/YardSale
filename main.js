@@ -42,7 +42,6 @@ navbar_shopping_cart.addEventListener('click', () => {
     }
 });
 
-
 // Auto generate products cards
 const productList = [];
 productList.push({
