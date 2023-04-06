@@ -339,10 +339,13 @@ header .order select {
 }
 /* Product deteals card, when you 'click' come product */
 .product-detail-card {
+  background-color: var(--white);
   width: 360px;
   padding-bottom: 24px;
   position: absolute;
   right: 0;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
 }
 .product-detail-card-close {
   background: var(--white);

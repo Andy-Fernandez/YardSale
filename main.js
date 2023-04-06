@@ -7,6 +7,12 @@ const navbar_shopping_cart = document.querySelector('.navbar-shopping-cart');
 const product_detail = document.querySelector('.product-detail');
 const main_container = document.querySelector('.main-container');
 
+// Product deteals card, when you 'click' come product
+const product_detail_card = document.querySelector('.product-detail-card');
+const product_detail_card_close = document.querySelector('.product-detail-card-close');
+
+
+
 // height and width of the window
 let appHeight = window.innerHeight;
 let appWidth = window.innerWidth;
@@ -139,3 +145,9 @@ for (product of productList) {
 
     cards_container.appendChild(productCard);
 }
+
+
+// Product deteals card, when you 'click' come product
+product_detail_card_close.addEventListener('click', () => {
+    product_detail_card.classList.toggle('inactive');
+});
