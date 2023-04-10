@@ -10,6 +10,7 @@ const main_container = document.querySelector('.main-container');
 // Product deteals card, when you 'click' come product
 const product_detail_card = document.querySelector('.product-detail-card');
 const product_detail_card_close = document.querySelector('.product-detail-card-close');
+const overlay = document.querySelector('.overlay');
 
 
 
@@ -150,4 +151,5 @@ for (product of productList) {
 // Product deteals card, when you 'click' come product
 product_detail_card_close.addEventListener('click', () => {
     product_detail_card.classList.toggle('inactive');
+    overlay.classList.toggle('inactive');   
 });
