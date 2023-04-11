@@ -147,9 +147,22 @@ for (product of productList) {
     cards_container.appendChild(productCard);
 }
 
+const addToCartButtons = document.querySelectorAll('.product-card');
+console.log(addToCartButtons);
+
+addToCartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    product_detail_card.classList.toggle('inactive');
+    overlay.classList.toggle('inactive');
+  });
+});
 
 // Product deteals card, when you 'click' come product
+
 product_detail_card_close.addEventListener('click', () => {
     product_detail_card.classList.toggle('inactive');
-    overlay.classList.toggle('inactive');   
+    overlay.classList.toggle('inactive');
 });
+// product_figure.addEventListener('click', () => {
+//     console.log('click');
+// });
