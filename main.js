@@ -147,22 +147,19 @@ for (product of productList) {
     cards_container.appendChild(productCard);
 }
 
-const addToCartButtons = document.querySelectorAll('.product-card');
-console.log(addToCartButtons);
+// Product deteals card, when you 'click' come product
+const seeMoreDetail = document.querySelectorAll('.product-card');
+console.log(seeMoreDetail);
 
-addToCartButtons.forEach(button => {
+seeMoreDetail.forEach(button => {
   button.addEventListener('click', () => {
     product_detail_card.classList.toggle('inactive');
     overlay.classList.toggle('inactive');
   });
 });
 
-// Product deteals card, when you 'click' come product
-
+// Close product details card
 product_detail_card_close.addEventListener('click', () => {
     product_detail_card.classList.toggle('inactive');
     overlay.classList.toggle('inactive');
 });
-// product_figure.addEventListener('click', () => {
-//     console.log('click');
-// });
